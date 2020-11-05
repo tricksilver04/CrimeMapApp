@@ -68,16 +68,6 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback {
         })
     }
 
-    private fun addHeatMap(latLngs: List<LatLng?>?) {
-        // Create a heat map tile provider, passing it the latlngs of the police stations.
-        val provider = HeatmapTileProvider.Builder()
-            .data(latLngs)
-            .build()
-
-        // Add a tile overlay to the map, using the heat map tile provider.
-        val overlay = mMap.addTileOverlay(TileOverlayOptions().tileProvider(provider))
-        overlay.isVisible = true
-    }
 
     private fun setupMonthYearPicker() {
         mMonthNow = SimpleDateFormat("yyyy-MM").format(Date())
@@ -110,7 +100,6 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback {
                 Status.SUCCESS -> {
                     mBinding.indeterminateBar.visibility = View.GONE
                     mClusterManager?.clearItems()
-                    //var latLngs: ArrayList<LatLng?> = ArrayList()
                     apiResponse.mResponse?.forEach { crime ->
                         val item = CrimeLocationItem(
                             lat = crime.location.latitude,
@@ -119,9 +108,8 @@ class MapsActivity : BaseActivity(), OnMapReadyCallback {
                             snippet = ""
                         )
                         mClusterManager?.addItem(item)
-                        //latLngs.add(LatLng(crime.location.latitude,crime.location.longitude))
+
                     }
-                    //addHeatMap(latLngs)
                     mClusterManager?.onCameraIdle()
                     mClusterManager?.cluster()
                 }
