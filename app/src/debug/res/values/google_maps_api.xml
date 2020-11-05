@@ -4,12 +4,12 @@
 
     To get one, follow this link, follow the directions and press "Create" at the end:
 
-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B0:8C:F4:7D:1C:8C:96:A1:D6:44:71:CF:67:92:F9:7B:04:3C:0A:E0%3Bcom.cartrack.challenge.ui
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=B0:8C:F4:7D:1C:8C:96:A1:D6:44:71:CF:67:92:F9:7B:04:3C:0A:E0%3Bcom.example.challenge.ui
 
     You can also add your credentials to an existing key, using these values:
 
     Package name:
-    com.cartrack.challenge.ui
+    com.example.challenge.ui
 
     SHA-1 certificate fingerprint:
     B0:8C:F4:7D:1C:8C:96:A1:D6:44:71:CF:67:92:F9:7B:04:3C:0A:E0
