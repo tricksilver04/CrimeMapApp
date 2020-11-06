@@ -12,6 +12,7 @@
   - MVVM Pattern
   - ViewModel
   - LiveData
+  - RxJava
 
 ### Unit Test
   - ViewModel Test
